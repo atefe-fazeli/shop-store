@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Getapi } from '../services/Getapi';
+import Cart from '../components/Cart'
 
 const Productscontexprovider = () => {
     const [Data ,setData] =useState([]);
@@ -19,7 +20,7 @@ const Productscontexprovider = () => {
         <div>
           
            
-           {Data.map((item)=>item.id)}
+           {Data.map((item)=>  <Cart key={item.id}  productdata={item}/>)}
             
         </div>
     );
