@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { Getapi } from '../services/Getapi';
-import Cart from '../components/Cart'
 
-const Productscontexprovider = () => {
+
+ export const Cartcontext =createContext()
+const Productscontext = ({children}) => {
     const [Data ,setData] =useState([]);
     useEffect(
        ()=>{
@@ -15,15 +16,15 @@ const Productscontexprovider = () => {
      
      ,[]
     )
-    
+      
     return (
-        <div>
-          
+       
+           <Cartcontext.Provider value={Data} >
+               {children}
            
-           {Data.map((item)=>  <Cart key={item.id}  productdata={item}/>)}
-            
-        </div>
+           </Cartcontext.Provider>
+    
     );
 };
 
-export default Productscontexprovider;
+export default Productscontext;

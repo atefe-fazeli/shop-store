@@ -1,12 +1,17 @@
 import './App.css';
-import Productscontexprovider from './context/Productscontexprovider';
+import Store from './components/Store';
+import Productscontext from './context/Productscontext';
+
 
 function App() {
   return (
-    <div>
-      <Productscontexprovider />
-    app  
-    </div>
+   <Productscontext>
+      <Store />
+   </Productscontext>
+     
+      
+     
+    
   );
 }
 
