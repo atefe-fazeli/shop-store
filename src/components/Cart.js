@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Cart = ({productdata}) => {
     const {image , title, price} = productdata
@@ -8,7 +10,7 @@ const Cart = ({productdata}) => {
             <h1>{title}</h1>
             <p>{price}</p>
             <div>
-                <a href='#'>Details</a>
+                {/* <Link to={`/productdetails/${productdata.id}`}>details</Link> */}
                 <button>Add To Shop</button>
             </div>
 

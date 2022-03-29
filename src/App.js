@@ -1,4 +1,7 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Cart from './components/Cart';
+import Cartdetails from './components/Cartdetails';
 import Store from './components/Store';
 import Productscontext from './context/Productscontext';
 
@@ -6,7 +9,12 @@ import Productscontext from './context/Productscontext';
 function App() {
   return (
    <Productscontext>
-      <Store />
+     {/* <Routes>
+       <Route path="/cart" element={<Cart />} /> 
+       <Route path="/cartdetails/:id" element={<Cartdetails />} />
+      
+     </Routes> */}
+     <Store />
    </Productscontext>
      
       
