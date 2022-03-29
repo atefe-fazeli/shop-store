@@ -10,7 +10,7 @@ const Cart = ({productdata}) => {
             <h1>{title}</h1>
             <p>{price}</p>
             <div>
-                {/* <Link to={`/productdetails/${productdata.id}`}>details</Link> */}
+                <Link to={`/productdetails/${productdata.id}`}>details</Link>
                 <button>Add To Shop</button>
             </div>
 
