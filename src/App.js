@@ -11,11 +11,11 @@ function App() {
    <Productscontext>
      <Switch>
        <Route path="/products/:id" component={Cartdetails} />
-       <Route path="/products" component={Store} />
-       <Redirect to="/products" />
+       <Route path="/" component={Store} />
+       <Redirect to="/" />
      </Switch>
      
-     <Store />
+     
    </Productscontext>
      
       

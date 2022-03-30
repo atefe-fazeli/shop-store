@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useReducer, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { Getapi } from '../services/Getapi';
 
 
