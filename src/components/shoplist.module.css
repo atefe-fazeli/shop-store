@@ -1,0 +1,17 @@
+.shoplistcontainer{
+    margin: 100px 35px;
+
+
+}
+.chooscontainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.chooscontainer h1{
+    margin: 50px;
+    color: green;
+}
+.elementcintainer{
+margin: 50px;
+}

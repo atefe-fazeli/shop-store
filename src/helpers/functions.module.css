@@ -1,0 +1,40 @@
+.buttoncontainer{
+    display: flex;
+    flex-direction:row;
+    justify-content: end;
+} 
+button{
+    
+    height: 50px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    background-color:#029be5;
+    color: white;
+    letter-spacing: 1.5px;
+
+}
+button[name="afteradd"]{
+ width: 52px;
+
+
+}
+button:hover{
+    background-color: #304ffe;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+
+span{
+        overflow: hidden;
+        white-space: nowrap;
+        display: block;
+        text-overflow: ellipsis;
+        text-align: center;
+}
+p{
+    margin: 10px;
+
+}
