@@ -1,0 +1,15 @@
+.checkoutcontainer{
+    width: 500px;
+    padding: 20px;
+    margin: 20px;
+    border: solid green 3px;
+    border-radius: 12px;
+    position: relative;
+    left: 900px;
+}
+.shoplinkcontainer {
+    text-decoration: none;
+    line-height: 30px;
+    color: #616161;
+    font-weight: 800;
+   }

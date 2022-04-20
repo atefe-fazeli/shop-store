@@ -7,6 +7,7 @@ import Productscontext from './context/Productscontext';
 import Selectedcontext from './context/Selectedcontext';
 import Shop from './components/Shop'
 import Navbar from './components/Navbar';
+import Checkout from './components/Checkout';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       < Navbar/>
        </div>
      <Switch>
-     <Route path="/products/shop" component={Shop} />
+     <Route path="/products/shop" component={() => <div><Shop /><Checkout /></div>} />
        <Route path="/products/:id" component={Cartdetails} />
       
        <Route path="/" component={Store} />

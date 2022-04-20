@@ -14,7 +14,6 @@ const Shop = () => {
         <div>
           {state.selectedItems.map(data=> <Shoplist key={data.id} Data={data}  />)}
         </div>
-         <div ><Link to="/" className={styles.shoplinkcontainer}>Back To Shop </Link></div>
       </div>
     );
 };

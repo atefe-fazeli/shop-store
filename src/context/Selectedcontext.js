@@ -11,11 +11,13 @@ const productReducer=(state,action)=>{
            if( !state.selectedItems.find(item => item.id === action.payload.id))
             state.selectedItems.push({...action.payload ,quantity:1})
             const counter =state.Itemcounter+1;
+             state.total+=action.payload.price;
             return  ({...state,Itemcounter:counter ,selectedItems:[...state.selectedItems]} )
 
          case "DELETE" :
                const newselectedItems = state.selectedItems.filter( item => item.id!==action.payload.id)
                 const removed=state.Itemcounter-1;
+                state.total-=action.payload.price;
                 return ({...state,Itemcounter:removed,selectedItems:newselectedItems})
     
 
@@ -27,6 +29,8 @@ const productReducer=(state,action)=>{
             const indexI= state.selectedItems.findIndex(item => item.id===action.payload.id);
             state.selectedItems[indexI].quantity++;
             state.Itemcounter++;
+            state.total+=action.payload.price;
+
             return ({...state ,selectedItems:[...state.selectedItems]}) 
 
         case "DECREASE":
@@ -37,6 +41,8 @@ const productReducer=(state,action)=>{
             const indexB= state.selectedItems.findIndex(item => item.id===action.payload.id);
             state.selectedItems[indexB].quantity--;
             state.Itemcounter--;
+            state.total-=action.payload.price;
+
             return ({...state ,selectedItems:[...state.selectedItems]} ) 
         
 
